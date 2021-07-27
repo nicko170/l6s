@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export REPO='https://github.com/G-Research/librenms/tarball/use_snmp_ping'
+export REPO='https://github.com/librenms/librenms/tarball/master'
 export TAG=$(cat ../VERSION)
 
 # Appllcation pod images
