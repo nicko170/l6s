@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t tpboudreau/librenms-rrdcached:$(cat ../VERSION) .
+docker build -t : nick170/librenms-rrdcached:$(cat ../VERSION) .
 

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t tpboudreau/librenms-console:$(cat ../VERSION) .
+docker build -t : nick170/librenms-console:$(cat ../VERSION) .
 

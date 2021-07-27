@@ -10,8 +10,10 @@ metadata:
     "helm.sh/hook-weight": "1"
 data:
   LIBRENMS_MYSQL_DATABASE: "librenms"
+  LIBRENMS_MYSQL_HOST: "galera-mariadb-galera.galera.svc.cluster.local"
+  LIBRENMS_APP_URL: "https://librenms.iaa.local/"
   LIBRENMS_MEMORY_LIMIT: {{ .Values.Application.memoryLimit | quote }}
-  LIBRENMS_BASE_URL: {{ coalesce .Values.Application.baseURL ( cat "http://" .Values.Application.ingressHost .Values.Application.ingressPath | nospace ) | quote }}
+  LIBRENMS_BASE_URL: "https://librenms.iaa.local/"
   LIBRENMS_AUTH_MECHANISM: {{ .Values.Application.authMechanism | quote }}
   {{- if eq .Values.Application.authMechanism "ldap" }}
   LIBRENMS_AUTH_LDAP_DEBUG: {{ .Values.LDAP.debug | quote }}

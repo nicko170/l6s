@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t tpboudreau/librenms-mount .
+docker build -t : nick170/librenms-mount .
 

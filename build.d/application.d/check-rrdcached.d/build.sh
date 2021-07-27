@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t tpboudreau/librenms-check-rrdcached:$(cat ../../VERSION) .
+docker build -t : nick170/librenms-check-rrdcached:$(cat ../../VERSION) .
 

@@ -1,6 +1,6 @@
 
 image:
-  repositoryRoot: "docker.io/tpboudreau/librenms-device"
+  repositoryRoot: "docker.io/: nick170/librenms-device"
   tag: "0.1.8"
 
 Devices:
