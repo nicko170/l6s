@@ -39,7 +39,7 @@ To deploy a simple, temporary test installation, just run:
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set librenmsServices.mysql.storage.type=temporary \
       --set librenmsServices.rrdcached.storage.type=temporary \
       --set librenmsServices.redis.storage.type=temporary
@@ -67,7 +67,7 @@ Production deployments will obviously require persistent storage for the databas
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set librenmsServices.mysql.readinessDelay=60 \
       --set librenmsServices.mysql.storage.type=dynamic \
       --set librenmsServices.mysql.storage.class=ssd \
@@ -139,7 +139,7 @@ Be sure to first create the namespace in which the application will be deployed 
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set librenmsServices.mysql.storage.type=static \
       --set librenmsServices.mysql.storage.claimName=mysql-volume \
       --set librenmsServices.rrdcached.storage.type=static \
@@ -180,7 +180,7 @@ After instantiating your non-cluster database services, invoke helm like:
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set librenmsServices.mysql.external.enabled=true \
       --set librenmsServices.mysql.external.address=m.m.m.m \
       --set librenmsServices.mysql.external.port=3306 \
@@ -252,7 +252,7 @@ After creating the load balancer service, you may deploy the chart.  When invoki
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set Application.serviceType=loadBalancer \
       --set Application.baseURL='http://n.n.n.n/' \
       --set librenmsServices.mysql.storage.type=temporary \
@@ -267,7 +267,7 @@ Replace 'n.n.n.n' with the external IP address of your load balancer.  If you ha
 >          --generate-name \
 >          --values values.yaml \
 >          --namespace librenms \
->          --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+>          --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
 >          --set Application.serviceType=loadBalancer \
 >          --set Application.installLoadBalancer=true \
 >          --set Application.baseURL='http://librenms.example.com/' \
@@ -285,7 +285,7 @@ Alternatively, to instruct helm to create only a ClusterIP service for LibreNMS,
       --generate-name \
       --values values.yaml \
       --namespace librenms \
-      --set credentials.application.key=$(docker run --rm : nick170/librenms-generate-key) \
+      --set credentials.application.key=$(docker run --rm nick170/librenms-generate-key) \
       --set Application.serviceType=cluster \
       --set librenmsServices.mysql.storage.type=... \
       --set librenmsServices.rrdcached.storage.type=... \

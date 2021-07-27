@@ -1,5 +1,5 @@
 
 image:
-  repository: "docker.io/: nick170/librenms-console"
+  repository: "docker.io/nick170/librenms-console"
   tag: "0.1"
 

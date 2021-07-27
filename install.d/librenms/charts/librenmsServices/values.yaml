@@ -3,10 +3,10 @@ mysql:
   servicePort: 3306
   providerPort: 33306
   image:
-    repository: "docker.io/: nick170/librenms-mysql"
+    repository: "docker.io/nick170/librenms-mysql"
     tag: "0.1.8"
   prepareVolumeImage:
-    repository: "docker.io/: nick170/librenms-mysql-prepare-volume"
+    repository: "docker.io/nick170/librenms-mysql-prepare-volume"
     tag: "0.1.8"
   storage:
     type: dynamic
@@ -32,7 +32,7 @@ rrdcached:
   writeDelay: 5
   logLevel: "LOG_NOTICE"
   image:
-    repository: "docker.io/: nick170/librenms-rrdcached"
+    repository: "docker.io/nick170/librenms-rrdcached"
     tag: "0.1.8"
   storage:
     type: dynamic
@@ -55,7 +55,7 @@ memcached:
   connectionRequests: 10
   logLevel: ""
   image:
-    repository: "docker.io/: nick170/librenms-memcached"
+    repository: "docker.io/nick170/librenms-memcached"
     tag: "0.1.8"
 
 redis:
@@ -63,7 +63,7 @@ redis:
   providerPort: 36379
   logLevel: "notice"
   image:
-    repository: "docker.io/: nick170/librenms-redis"
+    repository: "docker.io/nick170/librenms-redis"
     tag: "0.1.8"
   storage:
     type: dynamic
@@ -76,6 +76,6 @@ redis:
 
 subpath:
   image:
-    repository: "docker.io/: nick170/librenms-subpath"
+    repository: "docker.io/nick170/librenms-subpath"
     tag: "0.1.8"
 
